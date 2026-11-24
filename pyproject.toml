@@ -1,0 +1,11 @@
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = ["frontend", "ml/notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["B008"]  # FastAPI's Depends()/Query() in defaults is the normal pattern
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

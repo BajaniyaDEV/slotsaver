@@ -1,0 +1,30 @@
+# Secrets: never commit these
+.env
+*.env
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Local data and logs
+*.db
+logs/
+data/raw/
+mlruns/
+
+# Large model files (keep model_card.json in Git)
+ml/artifacts/*.joblib
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
